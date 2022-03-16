@@ -1,0 +1,381 @@
+@font-face {
+    font-family: 'Clear Sans';
+    font-weight: 900;
+    src: local('Clear Sans'), url(./fonts/clear-sans.bold.ttf) format('truetype');
+}
+
+html,body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+
+.letter-box {
+    width: calc(48vh * 0.13);
+    height:calc(48vh * 0.13);
+    box-sizing: border-box;
+    border: 2px #d3d6da solid;
+    position: relative;
+    
+}
+body {
+    font-family: 'Clear Sans', sans-serif;
+    font-weight: bold;
+    overflow-y: hidden;
+
+}
+
+.App {
+    margin: auto;
+    margin-top:0.5em;
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    min-width: 360px;
+    top: 50%;
+    justify-content: center;
+    height: 100%;
+   
+}   
+#tile {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-transform:uppercase;
+    font-weight: bold;
+    font-size: calc(100vh * 0.0475);
+    
+}
+
+.row-container {
+    display: flex;
+    gap: 0.3em;
+}
+.board-container {
+    
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3em;
+    justify-content: space-between;
+    
+}
+
+.board-container p {
+    margin: auto;
+    margin-top: 0.5em;
+}
+
+.history-container{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3em;
+}
+.blankrow-container {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3em;
+}
+.currentrow-container {
+    
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3em;
+}
+.currentrow-containers {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3em;
+}
+
+.hidden {
+    display: none
+}
+.btn-input {
+    background-color: black;
+    color: white;
+    border-radius: 4px;
+    height: 40px;
+    min-width: 30%;
+    margin: 0 auto;
+    font-weight: bold;
+    cursor: pointer;
+}
+.green {
+    color: white;
+    background-color: #6aaa64;
+}
+
+.gray {
+    color: white;
+    background-color: #787c7e;
+}
+
+.yellow {
+    color: white;
+    background-color: #c9b458;
+}
+
+.filled {
+    border: 2px black solid !important;
+}
+
+.fallback-input {
+    height: 1px;
+    position: absolute;
+    opacity: 0
+}
+.toasty {
+    margin: 0 auto;
+    position: absolute;
+    display: flex;
+    gap: 1em;
+    justify-content: space-around;
+}
+
+.toast-container {
+    
+    align-self: center;
+    
+    width: 100px;
+    height: 32px;
+    z-index: 1000;
+    text-align: center;
+    border-radius: 0.8em;
+   line-height: 32px;
+    align-self: center;
+    background-color: black;
+    color: white;
+    transition: opacity .5s ease-out;
+    -moz-transition: opacity .5s ease-out;
+    -webkit-transition: opacity .5s ease-out;
+    -o-transition: opacity .5s ease-out;
+}
+
+.rematch {
+    cursor: pointer;
+}
+.joinroom-container {
+  
+    text-align: center;
+}
+.user-container {
+    align-items: center;
+    margin: 0 auto;
+    height: 47vh;
+   
+    gap: 0.3em;
+    display: flex;
+    flex-direction: column;
+}
+
+.user-container p {
+    margin: 0 auto;
+}
+button {
+    padding: 0 !important;
+    text-align: center;
+}
+.buttons {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.buttons button {
+    max-width: 160px;
+    align-self: center;
+}
+
+.hundred {
+    height: 100%;
+
+}
+
+.invite-code {
+    margin: 0 auto;
+    background-color: #787c7e;
+    color: white;
+    width: 50%;
+    align-content: center;
+    padding: 10px;
+    border-radius: 0.5em;
+}
+
+.invite-code-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1em;
+    height: 100%;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    gap: 1em;
+    height: 80px;
+}
+
+#error {
+    margin: 0;
+    color: red;
+}
+
+.oppo {
+    width: 2vh !important;
+    height: 2vh !important;
+    border: 1px #d3d6da solid !important;
+}
+
+.opponent-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1em;
+    margin: auto;
+}
+.opponent-container p{
+    margin: auto;
+    line-height: 1.5em;
+}
+.oppoyrow {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1em;
+}
+.oppoy {
+    gap: 0.2em !important;
+    justify-content: center;
+}
+
+.opponent-board {
+    text-align: center;
+    margin: 0 auto;
+    max-height: 25vh;
+  
+}
+
+.keyrow {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 0.2em;
+    height: 100%;
+    
+}
+
+.keytile {
+    cursor: pointer;
+    border-radius: 5px;
+    min-width: 9%;
+    height: calc(25vh * 0.3);
+    position: relative;
+    
+}
+
+
+
+.none {
+    background-color: #D3D6DA;
+    
+}
+.one {
+    display: flex;
+    justify-content: center;
+}
+.keyboardtile {
+    border-radius: 5px;
+    cursor: pointer;
+    border: 0px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-transform:uppercase;
+    font-weight: bold;
+    font-size: 0.8rem;
+    height: 100%;
+    width: 100%;
+}
+
+.two {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+.three {
+    display: flex;
+    justify-content: center;
+}
+
+.special {
+   
+    min-width: 12% !important;
+    line-height: 0;
+    padding: 0 !important;
+    margin: 0 !important;
+    
+    
+}
+.name-input {
+    min-height: 40px;
+    border: 2px #D3D6DA solid;
+    border-radius: 4px;
+    width: 50%;
+    margin: 0 auto;
+    text-indent: 1em;
+ 
+    
+}
+.keyboard {
+    position: static;
+    margin-bottom: 1.1em;
+    height: 23vh;
+    display: flex;
+    gap: 0.3em;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+p {
+    font-size: 0.8rem;
+}
+
+@media only screen and (max-height: 580px) {
+    .opponent-board {
+        display: none;
+    }
+
+    .board-container {
+        height: 100vh;
+   
+    }
+    .letter-box {
+        width: calc(80vh * 0.12);
+        height:calc(80vh * 0.12);
+        box-sizing: border-box;
+        border: 2px #d3d6da solid;
+        position: relative;
+        
+    }
+}
+
+button:visited {
+    text-decoration: none;
+}
+
+button {
+    text-decoration: none;
+}
